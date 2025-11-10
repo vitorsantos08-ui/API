@@ -1,72 +1,26 @@
- Validador de Integração entre APIs (v5.0)
- Autor: Vitor Santos
- Linguagem: Python 3.x
- Versão: 5.0 — com camada antifraude simulada
- Descrição
+# 🤝 Validador de Integração entre APIs (v5.0)
 
-  Aplicação em Python que realiza integração e validação entre duas APIs públicas:
+**Autor:** Vitor Santos | **Linguagem:** Python 3.x  
 
- JSONPlaceholder
-  Usuários
+Aplicação demonstrativa que integra duas **APIs públicas** — [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) (usuários) e [FakeStoreAPI](https://fakestoreapi.com/products) (produtos) — aplicando **validações de consistência** e uma **camada antifraude simulada** com pontuação de risco de 0 a 100.
 
- FakeStoreAPI
-  Produtos
+> ⚠️ Projeto **acadêmico e fictício**, sem uso de dados reais.  
+> Criado para fins de **demonstração e aprendizado sobre integração entre APIs REST.**
 
-O sistema cruza os dados, aplica validações de consistência e uma camada antifraude simulada com pontuação de risco (0–100).
+---
 
- Funcionalidades
+### 🧠 Lógica antifraude
+- E-mail suspeito  
+- Categoria e preço do produto  
+- CPF fake gerado dinamicamente  
+- Heurísticas simples (nome e e-mail)  
 
-Integração entre APIs REST
+🔴 **Risco ≥ 70** → integração bloqueada  
+🟢 **Risco < 70** → integração aprovada  
 
-Validação de dados de usuário e produto
+---
 
-Geração de CPF fake para simulação
-
-Cálculo de risco antifraude baseado em:
-
-E-mail suspeito
-
-Categoria do produto
-
-Valor elevado
-
-Heurísticas simples
-
-🔴 Risco ≥ 70 → integração bloqueada
-🟢 Risco < 70 → integração aprovada
-
- Exemplo de uso
-Digite o ID do usuário (1–10): 4
-Digite o ID do produto (1–20): 7
-
-
-Saída resumida:
-
-Usuário: Patricia Lebsack | Julianne.OConner@kory.org
-Produto: Mens Casual Premium Slim Fit T-Shirts
-Risco: 42/100 — Integração aprovada ✅
-
- Como executar
-
-1️ Instalar dependência:
-
+### 🚀 Como executar
+```bash
 pip install requests
-
-
-2️ Executar o projeto:
-
 python validador_api_v5.py
-
- Estrutura do Projeto
-API_Trabalho/
-├── validador_api_v5.py
-├── README.md
-├── Artigo_API_ValidatorVitor_Santos_Fernandes.docx
-├── Resumo_Middleware_Servicos_Aplicacoes.docx
-
- Resumo
-
-Projeto prático de validação entre APIs com análise antifraude simulada,
-voltado para fins acadêmicos e demonstrações técnicas.
-
-  Desenvolvido por Vitor Santos
